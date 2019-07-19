@@ -22,6 +22,8 @@ namespace BoletoNet
 
         Protestar20DiasUteis = 20,
 
+        ProtestarDiasCorridos = 21,
+
         ConcederDescontoApenasAteDataEstipulada = 22,
 
         DevolverApos15DiasVencido = 42,
@@ -117,6 +119,10 @@ namespace BoletoNet
                     case EnumInstrucoes_Sicoob.Protestar20DiasUteis:
                         this.Codigo = (int)EnumInstrucoes_Sicoob.Protestar20DiasUteis;
                         this.Descricao = "Protestar 20 dias úteis após vencimento";
+                        break;
+                    case EnumInstrucoes_Sicoob.ProtestarDiasCorridos:
+                        this.Codigo = (int)EnumInstrucoes_Sicoob.ProtestarDiasCorridos;
+                        this.Descricao = String.Format("Protestar {0} dias úteis após vencimento", nrDias);
                         break;
                     case EnumInstrucoes_Sicoob.ConcederDescontoApenasAteDataEstipulada:
                         this.Codigo = (int)EnumInstrucoes_Sicoob.ConcederDescontoApenasAteDataEstipulada;

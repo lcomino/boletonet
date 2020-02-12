@@ -711,8 +711,8 @@ namespace BoletoNet
                     //}
                     if (String.IsNullOrEmpty(boleto.NumeroDocumento))
                     {
-                        vMsg += String.Concat("Boleto: ", boleto.NumeroDocumento, "; Remessa: Informe um Número de Documento!", Environment.NewLine);
-                        vRetorno = false;
+                        //vMsg += String.Concat("Boleto: ", boleto.NumeroDocumento, "; Remessa: Informe um Número de Documento!", Environment.NewLine);
+                        //vRetorno = false;
                     }
                     else if (String.IsNullOrEmpty(boleto.Remessa.TipoDocumento))
                     {
@@ -758,12 +758,12 @@ namespace BoletoNet
                         vMsg += String.Concat("Boleto: ", boleto.NumeroDocumento, "; Remessa: Cpf/Cnpj diferente de 11/14 caracteres!", Environment.NewLine);
                         vRetorno = false;
                     }
-                    else if (!boleto.NossoNumero.Length.Equals(8))
+                    /*else if (!boleto.NossoNumero.Length.Equals(8))
                     {
                         //sidnei.klein: Segundo definição recebida pelo Sicredi-RS, o Nosso Número sempre terá somente 8 caracteres sem o DV que está no boleto.DigitoNossoNumero
-                        vMsg += String.Concat("Boleto: ", boleto.NumeroDocumento, "; Remessa: O Nosso Número diferente de 8 caracteres!", Environment.NewLine);
+                        vMsg += String.Concat("Boleto: ", boleto.NumeroDocumento, String.Format("; Remessa: O Nosso Número {0} diferente de 8 caracteres!", boleto.NossoNumero), Environment.NewLine);
                         vRetorno = false;
-                    }
+                    }*/
                     else if (!boleto.TipoImpressao.Equals("A") && !boleto.TipoImpressao.Equals("B"))
                     {
                         vMsg += String.Concat("Boleto: ", boleto.NumeroDocumento, "; Tipo de Impressão deve conter A - Normal ou B - Carnê", Environment.NewLine);
